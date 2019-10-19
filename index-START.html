@@ -64,7 +64,11 @@
 const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
 //console.log(e.keyCode);
 console.log(audio);
-if(!audio) return;
+// stop the function from running all together 
+if(!audio) return; 
+//rewind sound to start when key is pressed repeatedly 
+audio.currentTime = 0; 
+
 audio.play();
   });
 
