@@ -62,14 +62,19 @@
   window.addEventListener('keydown', function(e){
     // Developer tools -keyPressed, keyCode linked to sound.wav
 const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+const key = document.querySelector(`.key[data-key ="${e.keyCode}"]`);
+
 //console.log(e.keyCode);
-console.log(audio);
+//console.log(audio);
+
 // stop the function from running all together 
 if(!audio) return; 
+
 //rewind sound to start when key is pressed repeatedly 
 audio.currentTime = 0; 
 
 audio.play();
+console.log(key);
   });
 
 </script>
