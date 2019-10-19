@@ -60,7 +60,9 @@
 <script>
 // Gives us which key is pressed in Developer tools (Win: Ctrl+Shift+I Mac: Command+Shift+I)
   window.addEventListener('keydown', function(e){
-console.log(e.keyCode);
+const audi = document.querySelector('audio[data-key = "${e.keyCode}"]');
+//console.log(e.keyCode);
+console.log(audio);
   });
 
 </script>

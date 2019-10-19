@@ -1,6 +1,7 @@
 html {
   font-size: 10px;
-  background: url(http://i.imgur.com/b9r5sEL.jpg) bottom center;
+/*image was not shown. Saved image locally.*/
+  background-image: url("b9r5sEL.jpg");
   background-size: cover;
 }
 
