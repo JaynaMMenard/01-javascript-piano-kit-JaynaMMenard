@@ -74,7 +74,13 @@ if(!audio) return;
 audio.currentTime = 0; 
 
 audio.play();
-console.log(key);
+//console.log(key);
+//key.addClass('playing');
+key.classList.add('playing');
+
+/*add and remove different classes
+key.classList.remove('playing');
+key.classList.toggle('playing');*/
   });
 
 </script>
