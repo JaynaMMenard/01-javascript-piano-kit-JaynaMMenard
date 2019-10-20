@@ -59,8 +59,22 @@
 
 <script>
 // Gives us which key is pressed in Developer tools (Win: Ctrl+Shift+I Mac: Command+Shift+I)
-  window.addEventListener('keydown', function(e){
-    // Developer tools -keyPressed, keyCode linked to sound.wav
+ 
+  
+function playSound(e){ 
+   
+ 
+
+const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+const key = document.querySelector(`.key[data-key ="${e.keyCode}"]`);  
+if(!audio) return; 
+audio.currentTime = 0; 
+audio.play(); 
+key.classList.add('playing');
+   
+   }
+   
+   /* // Developer tools -keyPressed, keyCode linked to sound.wav
 const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
 const key = document.querySelector(`.key[data-key ="${e.keyCode}"]`);
 
@@ -80,8 +94,8 @@ key.classList.add('playing');
 
 /*add and remove different classes
 key.classList.remove('playing');
-key.classList.toggle('playing');*/
-  });
+key.classList.toggle('playing');
+  });*/
 
 function removeTransition(e){
 
@@ -96,7 +110,7 @@ this.classList.remove('playing');
   const keys = document.querySelectorAll('.key');
   //keys.addEventListener('transitioned');
   keys.forEach(key => key.addEventListener('transitionend',removeTransition));
-
+  window.addEventListener('keydown',playSound);
 </script>
 
 
