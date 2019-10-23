@@ -14,9 +14,9 @@ body.html {
 .keys {
   display: flex;
   flex: 1;
-  min-height: 5vh;
-  align-items: right;
-  justify-content: right;
+  min-height: 80vh;
+  align-items: center;
+  justify-content: center;
 }
 
 .key {
