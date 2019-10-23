@@ -19,17 +19,39 @@ body.html {
   justify-content: center;
 }
 
+
 .key {
-  border: .4rem solid rgb(122, 120, 120);
-  border-radius: .25rem;
-  margin: 1rem;
+ 
+  border: .2rem solid rgb(122, 120, 120);
+  border-radius: .0rem;
+  margin: -1.65rem;
+  font-size: 1.5rem;
+  padding: 15rem .75rem;
+  transition: all .07s ease;
+  width: 3rem;
+  text-align: center;
+  color: white;
+  background: rgba(255, 255, 255, 0.4);
+  text-shadow: 0 0 .5rem rgb(46, 178, 211);
+}
+
+#parent{position: relative;}
+
+.keyB {
+ 
+  top: 30 px;
+  height: 0rem; 
+  margin-left: -1rem; 
+  margin-block-end: 18rem; 
+  background: black;
+  border: .2rem solid rgb(223, 216, 216);
+  border-radius: .0rem;
   font-size: 1.5rem;
   padding: 10rem .5rem;
   transition: all .07s ease;
   width: 3rem;
   text-align: center;
   color: white;
-  background: rgba(255, 255, 255, 0.4);
   text-shadow: 0 0 .5rem rgb(46, 178, 211);
 }
 
@@ -50,3 +72,7 @@ kbd {
   letter-spacing: .1rem;
   color: #ffc600;
 }
+
+
+
+
