@@ -17,37 +17,37 @@ body.html {
   min-height: 80vh;
   align-items: center;
   justify-content: center;
+ 
 }
 
 
 .key {
- 
-  border: .2rem solid rgb(122, 120, 120);
-  border-radius: .0rem;
-  margin: -1.65rem;
+
+  border: .25rem solid rgb(24, 23, 23);
+  border-radius: 1rem;
+  margin: -2rem;
   font-size: 1.5rem;
-  padding: 15rem .75rem;
+  padding: 23rem 1.5rem;
   transition: all .07s ease;
-  width: 3rem;
-  text-align: center;
+  width: 3rem; 
   color: white;
   background: rgba(255, 255, 255, 0.4);
   text-shadow: 0 0 .5rem rgb(46, 178, 211);
+  
 }
 
 #parent{position: relative;}
 
 .keyB {
- 
-  top: 30 px;
+
   height: 0rem; 
   margin-left: -1rem; 
   margin-block-end: 18rem; 
   background: black;
   border: .2rem solid rgb(223, 216, 216);
-  border-radius: .0rem;
+  border-radius: .5rem;
   font-size: 1.5rem;
-  padding: 10rem .5rem;
+  padding: 16.25rem .75rem;
   transition: all .07s ease;
   width: 3rem;
   text-align: center;

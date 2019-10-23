@@ -1,100 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>JS Drum Kit</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>JS Drum Kit</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 
 
 
-  <div class="keys">
-    <div data-key="65" class="key">
-      <kbd>A</kbd>
-      <span class="sound">clap</span>
-    </div>
+<div class="keys">
 
-    <div data-key="87" class="keyB" id ="parent" >
-        <kbd>W</kbd>
-        <span class="sound">clap</span>
-      </div>
-    <div data-key="66" class="key" >
-        <kbd>B</kbd>
-        <span class="sound">clap</span>
-      </div>
- 
+<div data-key="65" class="key">
+  <kbd>A</kbd>
+<span class="sound"></span>
+</div>
 
-      <div data-key="87" class="keyB" id ="parent">
-          <kbd>S</kbd>
-          <span class="sound">clap</span>
-        </div>
+<div data-key="87" class="keyB" id ="parent" >
+<kbd>W</kbd>
+<span class="sound"></span>
+</div>
+
+<div data-key="66" class="key" >
+<kbd>B</kbd>
+<span class="sound"></span>
+</div>
 
 
-    <div data-key="67" class="key">
-      <kbd>C</kbd>
-      <span class="sound">clap</span>
-    </div>
-    <div data-key="87" class="keyB" id ="parent" >
-        <kbd>R</kbd>
-        <span class="sound">clap</span>
-      </div>
+<div data-key="87" class="keyB" id ="parent">
+<kbd>S</kbd>
+<span class="sound"></span>
+</div>
 
-    <div data-key="68" class="key">
-      <kbd>D</kbd>
-      <span class="sound">clap</span>
-    </div>
 
-    <div data-key="87" class="keyB" id ="parent">
-        <kbd>T</kbd>
-        <span class="sound">clap</span>
-      </div>
+<div data-key="67" class="key">
+<kbd>C</kbd>
+<span class="sound"></span>
+</div>
 
-    <div data-key="69" class="key">
-      <kbd>E</kbd>
-      <span class="sound">clap</span>
-    </div>
-    <div data-key="87" class="keyB" id ="parent">
-        <kbd>Y</kbd>
-        <span class="sound">clap</span>
-      </div>
-    <div data-key="70" class="key">
-      <kbd>F</kbd>
-      <span class="sound">clap</span>
-    </div>
+<div data-key="87" class="keyB" id ="parent" >
+<kbd>R</kbd>
+<span class="sound"></span>
+</div>
 
-    <div data-key="87" class="keyB" id ="parent" >
-        <kbd>U</kbd>
-        <span class="sound">clap</span>
-      </div>
+<div data-key="68" class="key">
+<kbd>D</kbd>
+<span class="sound"></span>
+</div>
 
-    <div data-key="71" class="key">
-      <kbd>G</kbd>
-      <span class="sound">clap</span>
-    </div>
-      
-      <span class="sound"></span>
-    </div>
-  </div>
+<div data-key="87" class="keyB" id ="parent">
+<kbd>T</kbd>
+<span class="sound"></span>
+</div>
 
-  <audio data-key="65" src="sounds/clap.wav"></audio>
-  <audio data-key="83" src="sounds/hihat.wav"></audio>
-  <audio data-key="68" src="sounds/kick.wav"></audio>
-  <audio data-key="70" src="sounds/openhat.wav"></audio>
-  <audio data-key="71" src="sounds/boom.wav"></audio>
-  <audio data-key="72" src="sounds/ride.wav"></audio>
-  <audio data-key="74" src="sounds/snare.wav"></audio>
-  <audio data-key="75" src="sounds/tom.wav"></audio>
-  <audio data-key="76" src="sounds/tink.wav"></audio>
+<div data-key="69" class="key">
+<kbd>E</kbd>
+<span class="sound"></span>
+</div>
+
+<div data-key="87" class="keyB" id ="parent">
+<kbd>Y</kbd>
+<span class="sound"></span>
+</div>
+
+<div data-key="70" class="key">
+<kbd>F</kbd>
+<span class="sound"></span>
+</div>
+
+<div data-key="87" class="keyB" id ="parent" >
+<kbd>U</kbd>
+<span class="sound"></span>
+</div>
+
+<div data-key="71" class="key">
+<kbd>G</kbd>
+<span class="sound"></span>
+</div>
+  
+  <span class="sound"></span>
+</div>
+</div>
+
+<audio data-key="65" src="sounds/clap.wav"></audio>
+<audio data-key="83" src="sounds/hihat.wav"></audio>
+<audio data-key="68" src="sounds/kick.wav"></audio>
+<audio data-key="70" src="sounds/openhat.wav"></audio>
+<audio data-key="71" src="sounds/boom.wav"></audio>
+<audio data-key="72" src="sounds/ride.wav"></audio>
+<audio data-key="74" src="sounds/snare.wav"></audio>
+<audio data-key="75" src="sounds/tom.wav"></audio>
+<audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
 // Gives us which key is pressed in Developer tools (Win: Ctrl+Shift+I Mac: Command+Shift+I)
- 
-  
+
+
 function playSound(e){ 
-   
- 
+
+
 
 const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
 const key = document.querySelector(`.key[data-key ="${e.keyCode}"]`);  
@@ -102,10 +107,10 @@ if(!audio) return;
 audio.currentTime = 0; 
 audio.play(); 
 key.classList.add('playing');
-   
-   }
-   
-   /* // Developer tools -keyPressed, keyCode linked to sound.wav
+
+}
+
+/* // Developer tools -keyPressed, keyCode linked to sound.wav
 const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
 const key = document.querySelector(`.key[data-key ="${e.keyCode}"]`);
 
@@ -126,7 +131,7 @@ key.classList.add('playing');
 /*add and remove different classes
 key.classList.remove('playing');
 key.classList.toggle('playing');
-  });*/
+});*/
 
 function removeTransition(e){
 
@@ -138,10 +143,10 @@ this.classList.remove('playing');
 }
 
 
-  const keys = document.querySelectorAll('.key');
-  //keys.addEventListener('transitioned');
-  keys.forEach(key => key.addEventListener('transitionend',removeTransition));
-  window.addEventListener('keydown',playSound);
+const keys = document.querySelectorAll('.key');
+//keys.addEventListener('transitioned');
+keys.forEach(key => key.addEventListener('transitionend',removeTransition));
+window.addEventListener('keydown',playSound);
 </script>
 
 
