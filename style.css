@@ -18,15 +18,17 @@ body.html {
   align-items: center;
   justify-content: center;
  
+ 
 }
 
 
 .key {
 
-  border: .25rem solid rgb(24, 23, 23);
-  border-radius: 1rem;
-  margin: -2rem;
-  font-size: 1.5rem;
+  border: .20rem solid rgb(24, 23, 23);
+  border-radius: 0.5rem;
+  margin: -1rem;
+  margin-left: -2rem;
+  font-size: 0.5rem;
   padding: 23rem 1.5rem;
   transition: all .07s ease;
   width: 3rem; 
@@ -34,6 +36,20 @@ body.html {
   background: rgba(255, 255, 255, 0.4);
   text-shadow: 0 0 .5rem rgb(46, 178, 211);
   
+}
+.keyR {
+
+  border: .20rem solid rgb(24, 23, 23);
+  border-radius: 0.5rem;
+  align-items: right;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 23rem 1.5rem;
+  transition: all .07s ease;
+  width: 3rem; 
+  color: white;
+  background: rgba(255, 255, 255, 0.4);
+  text-shadow: 0 0 .5rem rgb(46, 178, 211);
 }
 
 #parent{position: relative;}
@@ -46,7 +62,7 @@ body.html {
   background: black;
   border: .2rem solid rgb(223, 216, 216);
   border-radius: .5rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 16.25rem .75rem;
   transition: all .07s ease;
   width: 3rem;
@@ -72,7 +88,11 @@ kbd {
   letter-spacing: .1rem;
   color: #ffc600;
 }
-
+.talign{
+ 
+   bottom: 0;
+   right: 0;
+}
 
 
 
